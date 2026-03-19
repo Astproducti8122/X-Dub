@@ -1,0 +1,47 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Build artifacts
+*.egg-info/
+build/
+dist/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Tool caches
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local notes
+RELEASE_TODO.md
+readme_lp.md
+HF_MODEL_CARD_DRAFT.md
+
+# Runtime outputs
+tmp/
+swanlog/
+*.log
+gpu_mem_log.csv
+
+# Local checkpoints and downloaded weights
+checkpoints
+checkpoints/
+hf_bundle/
+dwpose_tools/models/*.pth
+dwpose_tools/models/*.onnx
+
+# Local audio feature caches
+*-large-v2.npy
+*-wav2vec*.npy

@@ -1,0 +1,10 @@
+tensorrt
+polygraphy
+numpy
+tqdm
+torch
+opencv-python
+matplotlib
+onnxruntime
+mmpose
+mmcv

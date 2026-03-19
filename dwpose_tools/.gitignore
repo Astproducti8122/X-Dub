@@ -1,0 +1,15 @@
+*output*/*
+__pycache__/meta_info.cpython-37.pyc
+__pycache__/meta_info.cpython-310.pyc
+__pycache__/trt_utilities.cpython-310.pyc
+dwpose/__pycache__/__init__.cpython-37.pyc
+dwpose/__pycache__/__init__.cpython-310.pyc
+dwpose/__pycache__/onnxdet.cpython-37.pyc
+dwpose/__pycache__/onnxdet.cpython-310.pyc
+dwpose/__pycache__/onnxpose.cpython-37.pyc
+dwpose/__pycache__/onnxpose.cpython-310.pyc
+dwpose/__pycache__/util.cpython-37.pyc
+dwpose/__pycache__/util.cpython-310.pyc
+dwpose/__pycache__/wholebody.cpython-37.pyc
+dwpose/__pycache__/wholebody.cpython-310.pyc
+dwpose/__pycache__/trt_utilities.cpython-310.pyc

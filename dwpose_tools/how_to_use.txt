@@ -1,0 +1,14 @@
+# 1.A10
+conda activate openmmlab
+# 1.v100
+conda activate movie-asd
+
+# 2.install tensorrt
+export LD_LIBRARY_PATH=/mmu_audio_hdd/lijie11/cuda-12.1/lib64:/mmu_audio_hdd/lijie11/TensorRT-9.2.0.5/lib
+pip3 install /mmu_audio_hdd/lijie11/TensorRT-9.2.0.5/python/tensorrt-9.2.0.post12.dev5-cp37-none-linux_x86_64.whl
+
+# 3.export onnx to trt engine
+use export_trt.py to convert onnx to trt engine
+
+# 4.inference
+python3 inference_main_multiProcess.py
